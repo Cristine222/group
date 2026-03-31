@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foreign Language</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/161.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Foreign Languages</h1>
+        <div class="hero-subtitle">Introduction to languages like Spanish, French, or Mandarin.</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+        Foreign Language is the study of a language that is different from a person’s native language. Learning a foreign language helps improve communication with people from other countries and cultures.
+    </div>
+    <p>
+        Studying a new language can open opportunities in education, travel, and careers. It also helps develop better understanding and respect for different cultures and traditions.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/159.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1.Importance of Learning a Foreign Language</h3>
+        <p>
+Learning a foreign language is important in today’s global world. It helps people communicate with others from different countries and cultures. Knowing another language can also improve job opportunities and career growth. It allows individuals to understand different perspectives and traditions. In addition, learning a language can strengthen memory and thinking skills. Overall, it is a valuable skill for personal and professional development.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/160.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2.  Challenges in Learning a Foreign Language</h3>
+        <p>
+Learning a foreign language can be difficult for many people. One challenge is remembering new vocabulary and grammar rules. Pronunciation can also be hard, especially when sounds are unfamiliar. Some learners feel shy or nervous when speaking a new language. Another difficulty is understanding native speakers who talk fast. However, with practice and patience, these challenges can be overcome.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/161.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3.Benefits of Being Multilingual</h3>
+        <p>
+Being multilingual means knowing more than one language. This skill can help people travel more easily and communicate with others worldwide. It can also improve brain function and problem-solving skills. Multilingual individuals often have better cultural awareness and understanding. They can connect with more people and build stronger relationships. Overall, being multilingual offers many advantages in life.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/162.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Methods of Learning a Foreign Language</h3>
+        <p>
+There are many ways to learn a foreign language effectively. One common method is attending classes or language courses. Others use mobile apps, books, or online videos for self-study. Practicing with native speakers is also very helpful. Listening to music or watching movies in the target language can improve understanding. Consistent practice is the key to mastering any language.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/163.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5.Role of Culture in Language Learning</h3>
+        <p>
+Culture plays an important role in learning a foreign language. Language is closely connected to traditions, customs, and beliefs. Understanding culture helps learners use the language correctly in real situations. It also makes learning more interesting and meaningful. By learning culture, people can avoid misunderstandings when communicating. In the end, language and culture go hand in hand.
+        </p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

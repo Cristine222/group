@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Language Skills</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/116.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">English Language Skills</h1>
+        <div class="hero-subtitle">(Grammar, Vocabulary, and Writing)</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+       These skills help a person communicate clearly in speaking and writing.<br><br>
+    </div>
+    <p>
+     Grammar teaches the rules of sentence structure, vocabulary helps improve word knowledge, and writing develops the ability to express ideas in a clear and organized way.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/111.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1.Parts of Speech (nouns, verbs, adjectives, etc.)</h3>
+        <p>
+A noun is a word that names a person, place, thing, or idea, such as teacher, school, or happiness. A verb shows action or state of being, like run, eat, or is. An adjective describes or gives more information about a noun, such as beautiful, tall, or happy.
+Other parts of speech include adverbs, which describe verbs or adjectives (e.g., quickly, very), pronouns, which replace nouns (e.g., he, she, they), prepositions, which show location or direction (e.g., in, on, under), and conjunctions, which connect words or sentences (e.g., and, but, because).
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/112.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Sentence Structure and Syntax</h3>
+        <p>
+A basic sentence structure usually follows the pattern Subject + Verb + Object (SVO), such as “The student (subject) reads (verb) a book (object).” Proper sentence structure helps make ideas easier to understand and avoids confusion in communication.
+Syntax is the set of rules that controls how words and phrases are ordered in a sentence. It ensures that sentences are grammatically correct and meaningful. For example, changing word order can change the meaning of a sentence, such as “The dog bit the man” versus “The man bit the dog.”
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/113.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Vocabulary Building and Word Usage</h3>
+        <p>
+Vocabulary Building and Word Usage refers to the process of learning new words and understanding how to use them correctly in speaking and writing. It helps improve communication by allowing a person to express ideas more clearly and accurately. Building vocabulary involves reading books, listening, practicing new words, and learning their meanings, synonyms, and antonyms. Word usage focuses on how words are used in the right context so that sentences make sense.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/114.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Paragraph Writing and Composition</h3>
+        <p>
+Paragraph Writing and Composition is the skill of organizing ideas into a clear and structured paragraph. A paragraph usually focuses on one main idea, called the topic sentence, which tells the reader what the paragraph is about. Supporting sentences are added to explain, describe, or give examples that develop the main idea. A good paragraph also includes proper grammar, correct punctuation, and logical order of sentences so that the message is easy to understand. Composition refers to combining multiple paragraphs to form longer writing like essays, stories, or reports.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/115.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Grammar Rules and Common Errors</h3>
+        <p>
+Grammar Rules and Common Errors refer to the guidelines that help us use the English language correctly and the mistakes that often happen when these rules are not followed. Grammar rules include proper use of tenses, subject-verb agreement, punctuation, and sentence structure. These rules ensure that sentences are clear, correct, and easy to understand. For example, a correct sentence is “She goes to school every day,” not “She go to school every day.”
+Common errors in grammar often include incorrect verb forms, wrong word order, missing punctuation, and misuse of pronouns. Another frequent mistake is mixing past, present, and future tenses in one sentence without reason. Spelling mistakes and double negatives are also common issues that can change the meaning of a sentence.
+        </p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

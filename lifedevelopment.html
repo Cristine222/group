@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Development</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ✅ BACK BUTTON (FIXED TOP LEFT) */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: black;
+    text-decoration: none;
+
+    border-radius: 50%;
+    font-size: 18px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    height: 260px;
+    margin-top: 30px;
+
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+    url("images/72.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.hero-subtitle {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 10px;
+}
+
+.course-title-main {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px 10px;
+}
+
+.lecture-card {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.lecture-thumbnail {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.lecture-info h3 {
+    margin: 0 0 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ✅ BACK BUTTON -->
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Life Skills & Personal Development</h1>
+        <div class="hero-subtitle">Life Skills</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+        It improving yourself and learning how to handle everyday challenges. <br><br>
+    </div>
+    <p>
+        These skills help you grow as a person and succeed in school, work, and life.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/67.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Communication Skills</h3>
+        <p>The ability to express thoughts clearly and listen actively, which is vital for building
+relationships and resolving conflicts. Good communication helps people understand each other better. Listening is an important part because it shows respect and attention. Clear speaking helps avoid confusion and misunderstandings. Body language, like eye contact and gestures, also affects communication. Good communication skills are useful in school, work, and daily life.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/68.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Problem-Solving</h3>
+        <p>Problem solving is the ability to find solutions to difficult situations or challenges. It involves understanding the problem clearly before taking action. A person must think carefully and analyze possible solutions. Good problem solving requires creativity and critical thinking. It also involves making decisions and choosing the best option. Sometimes, problems need step-by-step solutions to be solved effectively. Learning from mistakes is an important part of problem solving. This skill is useful in school, work, and daily life.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/69.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Time Management</h3>
+        <p>Time management is the skill of organizing and planning how to divide your time between different activities. It helps you finish tasks on time without feeling too stressed or rushed. When you manage your time well, you can balance school, work, rest, and personal life more easily. It also helps you focus on important tasks instead of wasting time on distractions. Poor time management often leads to unfinished work and last-minute pressure. By planning ahead and setting priorities, you can become more productive and efficient every day.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/70.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Decision Making</h3>
+        <p>Decision making is the process of choosing the best option among different choices or solutions. It helps a person solve problems and decide what action to take in a situation. Good decision making involves thinking carefully, analyzing the options, and considering possible outcomes. It can be based on logic, experience, or sometimes advice from others. People make decisions every day, from simple choices like what to eat to important choices like planning their future. Strong decision-making skills help a person become more responsible and successful in life.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/71.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Emotional Intelligence</h3>
+        <p>Emotional intelligence is the ability to understand, manage, and control your own emotions while also understanding the emotions of other people. It helps you respond to situations in a calm and thoughtful way instead of reacting impulsively. A person with high emotional intelligence can handle stress better and communicate more effectively with others. It also includes empathy, which means being able to feel and understand what others are going through. This skill is important in school, work, and relationships because it helps avoid conflicts and build stronger connections. Overall, emotional intelligence helps a person become more mature, respectful, and socially aware.</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

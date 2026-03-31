@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psychology</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/141.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Basics of Psychology</h1>
+        <div class="hero-subtitle">Human Behavior, Cognition, and Emotions.</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+       Psychology is the scientific study of behavior and mental processes, how people think, feel, and act.<br><br>
+    </div>
+    <p>
+      It helps us understand ourselves and others in everyday life.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/142.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Cognition (Thinking)</h3>
+        <p>
+Cognition is the mental process of thinking, learning, and understanding. It includes memory, problem-solving, and decision-making. People use cognition every day when they study or make choices. For example, solving a math problem requires thinking and reasoning. Memory helps us store and recall information when needed. Cognition is important because it helps us adapt to different situations.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/143.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Emotion</h3>
+        <p>
+Emotion refers to feelings such as happiness, sadness, anger, and fear. These feelings can affect how we think and behave. Emotions can be triggered by experiences or situations. For example, a person may feel happy after receiving good news. Sometimes emotions can be strong and difficult to control. Understanding emotions helps people manage their reactions better.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/144.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Behavior</h3>
+        <p>
+Behavior is any action that a person does, whether it is visible or not. It can be influenced by thoughts, emotions, and the environment. Psychologists study behavior to understand why people act in certain ways. For example, a student may behave differently in school and at home. Positive behavior can lead to good outcomes, while negative behavior can cause problems. Learning about behavior helps improve relationships and daily life.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/146.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Development</h3>
+        <p>
+Development is the process of growth and change throughout a person’s life. It begins from infancy and continues into old age. Development includes physical, emotional, and mental changes. For example, children learn to walk, talk, and interact with others as they grow. Each stage of life has its own challenges and milestones. Studying development helps us understand how people change over time.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/145.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>Personality</h3>
+        <p>
+Personality refers to the unique traits and characteristics of a person. It influences how someone thinks, feels, and behaves. Personality can be shaped by both genetics and environment. For example, some people are naturally outgoing, while others are shy. A person’s personality can affect their relationships and decisions. Understanding personality helps people appreciate individual differences.
+        </p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

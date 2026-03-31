@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Literacy</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/176.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Digital Literacy</h1>
+        <div class="hero-subtitle">Basics of Digital Literacy</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+       A digitally literate person can communicate, collaborate, and stay safe online using digital tools.
+    </div>
+    <p>
+        Digital literacy involves evaluating online information, practicing ethical behavior, and using technology effectively in daily life.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/170.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Information Literacy</h3>
+        <p>Ability to find and evaluate information online. Helps identify reliable sources and prevents the spread of misinformation.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/172.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Communication and Collaboration</h3>
+        <p>Use of digital tools for effective communication and teamwork. Emphasizes respectful language and file-sharing platforms.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/173.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Digital Safety and Security</h3>
+        <p>Protect personal information online through strong passwords, privacy settings, antivirus software, and awareness of scams.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/174.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Digital Ethics and Responsibility</h3>
+        <p>Use technology responsibly by respecting others, giving credit to creators, avoiding cyberbullying, and practicing ethical online behavior.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/175.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Technology Use</h3>
+        <p>Understand how to operate devices and software to improve productivity, communication, and access to information effectively.</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

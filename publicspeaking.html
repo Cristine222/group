@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Communication</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO SECTION */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url(images/74.jpg) center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+/* LECTURES HEADER */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+/* LECTURE CARDS (FLEX LAYOUT LIKE OTHER COURSES) */
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Public Speaking</h1>
+        <div class="hero-subtitle">Communication</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+Public speaking is all about communicating ideas clearly and confidently to an audience. It involves speaking in front of people to inform, persuade, or entertain.<br><br>
+    </div>
+    <p>
+       Improve communication skills
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/61.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Informative Speaking</h3>
+        <p> an informative speech conveys knowledge— a task that every person engages in every day in some form or another. 
+            Whether giving someone who is lost directions, explaining the specials of the day as a server, or describing the plot of
+             a movie to friends, people engage in daily forms of information sharing. When done well,
+             information can provide a new perspective or increase our knowledge around a topic.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/57.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Persuasive Speaking</h3>
+        <p>Persuasive speaking is the type of speaking that most people engage in the most.
+             This type of speech can involve everything from arguing about politics to talking
+              about what to eat for dinner. Persuasive speaking is very connected to the audience,
+               as the speaker must, in a sense, meet the audience halfway. Persuasion, obviously,
+                is not entirely controlled by the speaker--persuasion occurs when an audience assents
+                 to what a speaker says. Consequently, persuasive speaking requires extra attention to 
+                 audience analysis.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/58.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Entertaining Speaking</h3>
+        <p>An entertaining speech is a speech designed to captivate an audience’s attention and regale or amuse
+             them while delivering a message. Like more traditional informative or persuasive speeches, entertaining speeches should communicate a clear message, but the manner of speaking used in an entertaining speech is typically different. Entertaining speeches are often delivered on special occasions 
+            (e.g., a toast at a wedding, an acceptance speech at an awards banquet, a motivational 
+            speech at a conference), which is why they are sometimes referred to as special-occasion
+             speeches.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/59.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4.Motivational Speaking</h3>
+        <p> A motivational speaker shares positive messages, personal experiences, 
+            and advice to help others overcome challenges and believe in themselves.
+             The goal is to make people feel empowered and ready to take action.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/60.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5.Demonstrative Speaking</h3>
+        <p>Demonstrative speaking is a type of public speaking where the speaker shows how 
+            to do something step by step. It combines both explanation and action to help the 
+            audience understand better. The speaker often uses visual aids or tools during the
+             presentation. This makes the learning process more clear and engaging. Demonstrative
+              speaking is commonly used in teaching and training. It helps people learn new skills
+               by watching and listening at the same time. The speaker must be clear and organized 
+               when presenting the steps. Good preparation is important to avoid confusion. Examples
+                include cooking demonstrations or showing how to use a computer program. Demonstrative 
+            speaking is effective because it makes learning simple and practical.</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

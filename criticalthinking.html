@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem Solving</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/169.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Critical Thinking</h1>
+        <div class="hero-subtitle">Logic, Reasoning, and Decision Making</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+       Problem solving involves understanding a situation, considering solutions, and choosing the most effective one.
+    </div>
+    <p>
+        Developing problem-solving skills helps individuals become more independent, confident, and successful in various situations.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/164.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Analysis</h3>
+        <p>Analysis is breaking down complex information into smaller parts to understand it better. It involves identifying key points, patterns, and connections to make informed decisions.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/165.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Evaluation</h3>
+        <p>Evaluation is judging the credibility and relevance of information and arguments. It requires careful assessment of sources, logic, and evidence to make sound decisions.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/166.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Inference</h3>
+        <p>Inference is drawing logical conclusions from available evidence, even when all details are not stated. It helps in predicting outcomes and understanding hidden meanings.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/167.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Explanation</h3>
+        <p>Explanation is clearly communicating reasoning and conclusions. It organizes ideas with supporting evidence to help others understand your thought process.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/168.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Self-Regulation</h3>
+        <p>Self-regulation is managing one’s own thinking, recognizing biases, and adjusting strategies to improve problem-solving. It promotes disciplined, objective, and critical thinking.</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

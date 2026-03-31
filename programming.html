@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO SECTION */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/110.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+/* LECTURES HEADER */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+/* LECTURE CARDS (FLEX LAYOUT LIKE MATH) */
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Introduction to Programming</h1>
+        <div class="hero-subtitle">Simple Programs</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+       Writing instructions that a computer can understand and follow to perform specific tasks.<br><br>
+    </div>
+    <p>
+      Programming helps create websites, mobile apps, games, and software systems.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/105.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Variables and Data Types</h3>
+        <p>A variable is like a container or box that holds data which can change during the program.
+             For example, a variable can store a name, a number, or a result of a calculation.
+             It is given a name so the programmer can easily use it later in the code.
+Data types define what kind of data a variable can store. Common data types include integer (whole numbers like 1, 10, 100), 
+float (numbers with decimals like 3.5 or 7.2), string (text like “Hello”), and boolean (true or false values).
+</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/106.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Control Structures (if statements, loops)</h3>
+        <p>Control Structures (If Statements and Loops) are important concepts in programming that control the flow of a program or decide how instructions are executed.
+An if statement is used for decision-making in a program. It checks a condition and runs a specific block of code only if the condition is true. For example, if a number is greater than 10, the program can display a message. If the condition is false, it can skip or run another block of code using else or else if.
+Loops are used to repeat a block of code multiple times until a condition is met. Common types of loops include the for loop, which runs a set number of times, and the while loop, which continues as long as a condition is true. Loops help save time and reduce repeated code.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/107.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Functions and Procedures</h3>
+        <p>Functions and Procedures are important concepts in programming that help organize code into reusable blocks of instructions.
+A function is a block of code that performs a specific task and usually returns a value. For example, a function can calculate the sum of two numbers and give back the result. Functions help make programs shorter, easier to read, and easier to debug because the same code can be used many times without rewriting it.
+A procedure is similar to a function, but it does not return a value. Instead, it performs an action, such as displaying a message, printing output, or updating data. Procedures are used when you only need to execute steps without needing a result.
+</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/108.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Arrays and Data Structures</h3>
+        <p>An array is a collection of multiple values stored in a single variable. These values are usually of the same type, such as numbers or strings. Each item in an array has an index number that helps you access it easily. For example, an array can store a list of student names or test scores. Arrays make it easier to handle large
+             amounts of related data without creating many separate variables.
+Data structures are ways of organizing and storing data so it can be used efficiently in a program. Besides arrays, other common data structures include lists, stacks, queues, linked lists, and dictionaries. Each type is used for different purposes, such as storing ordered data, managing tasks, or quickly searching information.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/109.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5.Algorithms and Problem Solving</h3>
+        <p>An algorithm is a clear set of instructions that tells the computer how to complete a task. It must be simple, logical, and follow a specific order. For example, an algorithm for adding two numbers would include steps like: get the first number, get the second number, add them together, and show the result.
+Problem solving in programming means breaking a big problem into smaller, easier steps so it can be solved efficiently. It involves understanding the problem, planning a solution, writing the algorithm, and then converting it into code..</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

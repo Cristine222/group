@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Management</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ✅ BACK BUTTON (FIXED TOP LEFT) */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: black;
+    text-decoration: none;
+
+    border-radius: 50%;
+    font-size: 18px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    height: 260px;
+    margin-top: 30px;
+
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+    url("images/177.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.hero-subtitle {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 10px;
+}
+
+.course-title-main {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px 10px;
+}
+
+.lecture-card {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.lecture-thumbnail {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.lecture-info h3 {
+    margin: 0 0 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ✅ BACK BUTTON -->
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Study Skills and Time Management</h1>
+        <div class="hero-subtitle">organization Focus, Learning Strategies</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+        Study skills are techniques and strategies that help you learn and understand information more effectively. These include note-taking, reading carefully, organizing ideas, and reviewing lessons regularly.<br><br>
+    </div>
+    <p>
+      Time management is the ability to plan and use your time wisely. It helps you complete tasks on time and avoid cramming or rushing.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/178.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Effective Note-Taking </h3>
+        <p>Effective note-taking is an important study skill that helps students remember information better. It involves writing down key points instead of copying everything word for word. Methods like outlining, mind mapping, or using bullet points can make notes clearer. Reviewing notes regularly also improves understanding and memory. Good notes can serve as a useful guide when preparing for exams. Practicing this skill can make studying more organized and efficient.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/179.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Creating a Study Schedule</h3>
+        <p>A study schedule helps students manage their time wisely. It allows them to plan when to study different subjects or topics. By following a schedule, students can avoid last-minute cramming. It also helps balance schoolwork with rest and other activities. Consistency in following a schedule builds discipline and good habits. A well-planned schedule can reduce stress and improve academic performance.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/180.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Avoiding Procrastination </h3>
+        <p>Procrastination is the habit of delaying tasks that need to be done. It can lead to poor performance and unnecessary stress. Students can avoid procrastination by breaking tasks into smaller, manageable parts. Setting deadlines and goals can also motivate them to start early. Removing distractions like phones or social media helps improve focus. Developing self-discipline is key to overcoming procrastination.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/181.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Setting Goals for Learning</h3>
+        <p>Setting clear goals helps students stay focused and motivated. Goals can be short-term, like finishing homework, or long-term, like passing exams. Having a goal gives direction and purpose to studying. It also helps students measure their progress over time. Achieving small goals can boost confidence and encourage further effort. Goal-setting is an important part of effective time management.4. Setting Goals for Learning
+Setting clear goals helps students stay focused and motivated. Goals can be short-term, like finishing homework, or long-term, like passing exams. Having a goal gives direction and purpose to studying. It also helps students measure.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/182.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Taking Breaks and Managing Energy</h3>
+        <p>Taking breaks is essential for maintaining focus and productivity. Studying for long hours without rest can lead to burnout. Short breaks help refresh the mind and improve concentration. Techniques like the Pomodoro method can be useful for balancing study and rest. Managing energy levels is just as important as managing time. With proper breaks, students can study more effectively and stay motivated.</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url(images/73.jpg) center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Basic Computer Operations</h1>
+        <div class="hero-subtitle">Computer</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+        Computer Literacy includes basic skills like typing, opening programs, browsing websites, and using online tools.
+    </div>
+    <p>
+        Computer literacy means knowing how to use a computer and the internet safely and effectively.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<!-- Lecture 1 -->
+<div class="lecture-card">
+    <img src="images/51.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Web Design</h3>
+        <p>Web designing is the process of creating and organizing websites using code and design. It uses languages like HTML for structure and CSS for styling. A good website should be simple, easy to navigate, and visually appealing. Web designers make sure websites work properly on computers, phones, and tablets.</p>
+    </div>
+</div>
+
+<!-- Lecture 2 -->
+<div class="lecture-card">
+    <img src="images/52.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Digital Marketing</h3>
+        <p>Digital marketing is the promotion of products or services using the internet and digital devices. It includes social media, websites, email, and online ads to reach more people. Businesses use digital marketing to attract customers and increase sales. It allows fast and wide communication with audiences. Digital marketing effectively began in 1990 when the Archie search engine was created as an index for FTP sites.</p>
+    </div>
+</div>
+
+<!-- Lecture 3 -->
+<div class="lecture-card">
+    <img src="images/53.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Software Development</h3>
+        <p>Software development is the process of creating computer programs and applications. It involves planning, coding, testing, and improving software to make it work properly. Developers use programming languages to build different types of software like games, apps, and systems. Software development helps solve problems and makes tasks easier for users.</p>
+    </div>
+</div>
+
+<!-- Lecture 4 -->
+<div class="lecture-card">
+    <img src="images/54.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Computer Hardware Engineering and Networking</h3>
+        <p>Computer Hardware Engineering is the field of designing, building, and testing physical parts of a computer such as the processor, motherboard, and memory. It focuses on how computer components work together to make the system function properly. Computer Networking is the study of connecting computers so they can share data and resources like files, printers, and internet access. It includes setting up and maintaining networks such as LAN and WAN to ensure smooth communication between devices.</p>
+    </div>
+</div>
+
+<!-- Lecture 5 -->
+<div class="lecture-card">
+    <img src="images/55.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Multimedia and Animation</h3>
+        <p>Multimedia and Animation courses are a perfect blend of artistry and technical skills. These courses involve creating and manipulating images, sounds, videos, and other media elements to produce engaging and interactive content. Multimedia and Animation professionals work in various industries, including entertainment, education, advertising, gaming, and more. To excel in this field, you'll need a basic knowledge of computer graphics and a strong sense of art and design.</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

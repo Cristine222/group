@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interactive Education Q&A</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+    color: #222;
+  }
+  header {
+    background: #f46d00;
+    padding: 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  /* Back button styles */
+  .back-btn {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    color: #f46d00;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 0.9rem;
+  }
+  .back-btn:hover {
+    background: #f46d00;
+    color: white;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  }
+  .qa-item { margin-bottom: 2rem; }
+  .qa-question {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .asked-label {
+    background: #f46d00;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .answer-box {
+    margin-top: 0.6rem;
+    background: #fff3e0;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    box-shadow: inset 0 0 8px #f0a04faa;
+  }
+  .user-answers-section {
+    margin-top: 1rem;
+    border-top: 1px solid #f46d00;
+    padding-top: 1rem;
+  }
+  .user-answer {
+    background: #fff6d6;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .delete-btn {
+    background: #f44336;
+    border: none;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  textarea {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #f46d00;
+    padding: 0.5rem;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  button.submit-btn {
+    margin-top: 0.6rem;
+    background: #f46d00;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button.submit-btn:hover { background: #e26100; }
+</style>
+</head>
+<body>
+
+<header>
+  Ask & Answer
+  <button class="back-btn" onclick="window.history.back()">← Back</button>
+</header>
+
+<main id="qa-container"></main>
+
+<script>
+  const questions = [
+    { question: "What is the primary purpose of education?", answer: "To provide knowledge, skills, and values that help individuals grow personally and contribute to society." },
+    { question: "How does education impact personal development?", answer: "Education improves critical thinking, problem-solving, communication skills, and self-confidence." },
+    { question: "Why is literacy considered a basic goal of education?", answer: "Literacy allows individuals to read, write, and understand information, which is essential for learning and daily life." },
+    { question: "What is the role of teachers in education?", answer: "Teachers guide learning, motivate students, and help develop intellectual and social skills." },
+    { question: "How does education benefit society?", answer: "It promotes social equality, economic growth, innovation, and responsible citizenship." },
+    { question: "What is inclusive education?", answer: "Education that ensures all students, including those with disabilities or from marginalized groups, have access to learning opportunities." },
+    { question: "Why is lifelong learning important?", answer: "It allows individuals to adapt to change, acquire new skills, and continue personal and professional growth throughout life." },
+    { question: "What is the difference between formal and informal education?", answer: "Formal education takes place in schools with structured curricula, while informal education happens through daily life experiences, like learning from family or community." },
+    { question: "How do educational technologies help learning?", answer: "They provide interactive tools, access to resources, and personalized learning experiences that enhance understanding." },
+    { question: "What is the importance of critical thinking in education?", answer: "Critical thinking helps students analyze information, make informed decisions, and solve problems effectively." },
+    { question: "Why is early childhood education important?", answer: "It builds a strong foundation for cognitive, social, and emotional development in children." },
+    { question: "How does education promote equality?", answer: "By providing equal opportunities for learning, education reduces discrimination and empowers disadvantaged groups." },
+    { question: "What is the role of education in economic development?", answer: "Educated individuals have better job skills, which increases productivity, innovation, and overall economic growth." },
+    { question: "How does education contribute to global citizenship?", answer: "It teaches awareness of global issues, respect for diversity, and responsibility towards the environment and society." },
+    { question: "What is the connection between education and health?", answer: "Education increases awareness about nutrition, hygiene, and healthy lifestyles, leading to improved health outcomes." }
+  ];
+
+  const STORAGE_KEY = "userAnswers";
+  let userAnswers = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+
+  const container = document.getElementById("qa-container");
+
+  function saveUserAnswers() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(userAnswers));
+  }
+
+  function createQAItem(q, index) {
+    const item = document.createElement("div");
+    item.className = "qa-item";
+
+    // Question heading
+    const questionDiv = document.createElement("div");
+    questionDiv.className = "qa-question";
+    questionDiv.tabIndex = 0;
+    questionDiv.innerHTML = `<span class="asked-label">ASKED</span> ${index + 1}. ${q.question}`;
+    item.appendChild(questionDiv);
+
+    // Answer box
+    const answerBox = document.createElement("div");
+    answerBox.className = "answer-box";
+    answerBox.textContent = q.answer;
+    item.appendChild(answerBox);
+
+    // User answers section
+    const userSection = document.createElement("div");
+    userSection.className = "user-answers-section";
+    userSection.innerHTML = "<strong>User Answers:</strong>";
+    item.appendChild(userSection);
+
+    const userAnswersList = document.createElement("div");
+    userSection.appendChild(userAnswersList);
+
+    // Function to add a user answer with delete button
+    function addUserAnswerElement(ansText, ansIndex) {
+      const ansDiv = document.createElement("div");
+      ansDiv.className = "user-answer";
+      ansDiv.textContent = ansText;
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.className = "delete-btn";
+      deleteBtn.textContent = "Delete";
+      deleteBtn.addEventListener("click", () => {
+        if (userAnswers[index]) {
+          userAnswers[index].splice(ansIndex, 1);
+          saveUserAnswers();
+        }
+        renderUserAnswers(); // refresh list
+      });
+
+      ansDiv.appendChild(deleteBtn);
+      userAnswersList.appendChild(ansDiv);
+    }
+
+    function renderUserAnswers() {
+      userAnswersList.innerHTML = "";
+      (userAnswers[index] || []).forEach(addUserAnswerElement);
+    }
+
+    renderUserAnswers();
+
+    // Textarea and submit button
+    const textarea = document.createElement("textarea");
+    textarea.placeholder = "Add your answer here...";
+    item.appendChild(textarea);
+
+    const submitBtn = document.createElement("button");
+    submitBtn.className = "submit-btn";
+    submitBtn.textContent = "Submit Answer";
+    item.appendChild(submitBtn);
+
+    submitBtn.addEventListener("click", () => {
+      const val = textarea.value.trim();
+      if (!val) { alert("Please enter an answer."); return; }
+      if (!userAnswers[index]) userAnswers[index] = [];
+      userAnswers[index].push(val);
+      saveUserAnswers();
+      textarea.value = "";
+      renderUserAnswers();
+    });
+
+    return item;
+  }
+
+  questions.forEach((q, i) => {
+    container.appendChild(createQAItem(q, i));
+  });
+</script>
+
+</body>
+</html>

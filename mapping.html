@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapping</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ✅ BACK BUTTON (FIXED TOP LEFT) */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: black;
+    text-decoration: none;
+
+    border-radius: 50%;
+    font-size: 18px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    height: 260px;
+    margin-top: 30px;
+
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+    url("images/134.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.hero-subtitle {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 10px;
+}
+
+.course-title-main {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px 10px;
+}
+
+.lecture-card {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.lecture-thumbnail {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.lecture-info h3 {
+    margin: 0 0 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ✅ BACK BUTTON -->
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Geography and Maps</h1>
+        <div class="hero-subtitle">Plan Travel</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+       Geography helps us learn about different regions, countries, and natural features of the world.<br><br>
+    </div>
+    <p>
+      They help people find directions, measure distances, and understand places better.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/129.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Types of Maps </h3>
+        <p>Types of maps refer to the different ways maps are used to show information about the Earth. A physical map shows natural features like mountains, rivers, and valleys. A political map shows countries, cities, and boundaries between regions. Climate maps display weather patterns and temperature differences around the world. Road maps help people find directions and travel routes easily. Thematic maps focus on specific topics such as population, resources, or industries.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/130.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Latitude and Longitude</h3>
+        <p>
+Latitude and longitude are imaginary lines used to determine the exact location of any place on Earth. Latitude lines run horizontally and measure the distance north or south of the Equator. Longitude lines run vertically and measure the distance east or west of the Prime Meridian. Together, these lines form a grid system called the geographic coordinate system. This system helps sailors, pilots, and travelers navigate across land and seas. Latitude also affects climate, as areas near the Equator are warmer than areas near the poles.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/133.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Landforms and Waterforms</h3>
+        <p>Landforms and waterforms are natural features of the Earth’s surface. Landforms include mountains, hills, plateaus, plains, and valleys. Waterforms include rivers, lakes, seas, oceans, and waterfalls. These features are formed by natural processes such as erosion, volcanic activity, and movement of tectonic plates. Landforms and waterforms affect climate, weather, and human activities in different regions. People often settle near waterforms because they provide water, food, and transportation. Understanding these features helps us learn how the Earth is shaped and how people live on it.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/131.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Map Reading Skills</h3>
+        <p>Map reading is the ability to understand and interpret the information shown on a map. Important skills include recognizing symbols, scale, legend, and direction. The legend explains the meaning of colors and symbols used on the map. The scale helps measure distances between places accurately. Understanding compass directions (north, south, east, west) is essential for navigation. Map reading also involves identifying features like mountains, rivers, cities, and roads. These skills are important for traveling, planning, and studying geography. Learning to read maps makes it easier to explore and understand the physical and human world.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/132.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Climate and Weather Maps</h3>
+        <p>Map reading skills are the abilities needed to understand and use maps correctly. These skills include identifying symbols, reading a map key or legend, and understanding directions like north, south, east, and west. Scale is also important because it shows the relationship between distances on the map and real life. Map reading helps people plan routes, travel safely, and understand locations. It is used in navigation, geography studies, and even in emergency situations. Learning how to read maps improves spatial thinking and awareness of the world. These skills are useful in everyday life and many professions.</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

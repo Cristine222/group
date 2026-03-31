@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistics</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO SECTION */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/93.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+/* LECTURES HEADER */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+/* LECTURE CARDS (FLEX STYLE LIKE OTHER COURSES) */
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Introduction to Statistics</h1>
+        <div class="hero-subtitle">Basic probability</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+       Study of how to collect, organize, analyze, and interpret data. It helps us understand information by turning raw numbers into meaningful results.<br><br>
+    </div>
+    <p>
+      Statistics is used in everyday life such as in surveys, research, business, health, and education.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/88.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Data Collection Methods </h3>
+        <p>Data Collection Methods refer to the different ways of gathering information or data for study, research, or decision-making. It is an important part of statistics because the quality of results depends on how accurate the data is collected. One common method is surveys, where people answer questions through forms, interviews, or online questionnaires. Another method is observation, where data is collected by watching and recording behavior or events. Experiments are also used, where researchers change certain factors to see the results. Lastly, secondary data collection involves using existing information from books, websites, or reports. These methods help researchers get reliable data for analysis and conclusions.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/89.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Measures of Central Tendency (mean, median, mode)</h3>
+        <p>Measures of Central Tendency (Mean, Median, Mode) are statistical tools used to describe and summarize a set of data with a single value that represents the center.
+The mean is the average of a set of numbers. It is found by adding all values together and dividing by how many values there are. It is useful for showing the overall balance of data.
+The median is the middle value when the numbers are arranged in order. If there are two middle numbers, you find their average. The median is helpful when data has extreme values or outliers.
+The mode is the number that appears most often in a data set. A data set may have one mode, more than one mode, or no mode at all. It is useful for identifying the most common value.
+Overall, these three measures help us understand and interpret data in a simple and meaningful way.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/90.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Data Presentation (tables, graphs, charts) </h3>
+        <p>Data Presentation (Tables, Graphs, and Charts) is the process of organizing and showing data in a clear and easy-to-understand way. It helps people quickly interpret information and see patterns or trends without reading long lists of numbers. One common method is using tables, where data is arranged in rows and columns for better organization. Graphs such as bar graphs, line graphs, and pie charts visually show comparisons, changes, or proportions of data. Charts are also used to summarize information in a more visual format, making it easier to analyze.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/91.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Probability Basics</h3>
+        <p>Probability Basics is the branch of statistics that deals with the chance or likelihood of an event happening. It helps us measure uncertainty in everyday situations, such as predicting weather, winning games, or drawing cards. Probability is usually expressed as a number between 0 and 1, where 0 means impossible and 1 means certain to happen. For example, flipping a coin has a 50% chance of landing on heads or tails. Basic probability is calculated using the formula: favorable outcomes divided by total possible outcomes. Understanding probability helps people make better predictions and decisions in real life.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/92.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Interpretation and Analysis of Data</h3>
+        <p>Interpretation and Analysis of Data is the process of examining collected data and explaining what it means in a clear and meaningful way. It involves organizing data, looking for patterns, and identifying trends or relationships between values. Analysis helps turn raw numbers into useful information that can support conclusions or decisions. Interpretation means explaining the results in simple terms so others can understand the findings. For example, in a survey, we might analyze answers to see which option is most popular. This topic is important in statistics because it helps people make informed decisions based on evidence instead of guesswork.</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

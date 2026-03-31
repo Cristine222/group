@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Environment</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/86.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Environmental Science</h1>
+        <div class="hero-subtitle">(Humans, Animals, and Plants)</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+        Study of the environment and how living things interact with nature.
+    </div>
+    <p>
+        Environmental science helps us find ways to protect the environment and maintain balance in nature.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/100.png" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Ecosystem and Biodiversity</h3>
+        <p>An ecosystem is a community of organisms interacting with their environment. Biodiversity ensures a healthy and stable environment by supporting life balance. An ecosystem is a community of living organisms (plants, animals, and microorganisms) interacting with their non-living environment (air, water, soil, and sunlight). In an ecosystem, everything is connected, and each organism plays a role in maintaining balance in nature. Biodiversity refers to the variety of all living things on Earth, including different species of plants, animals, and microorganisms. High biodiversity means a healthy and stable environment because different species support each other for survival.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/101.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Pollution (Air, Water, Soil)</h3>
+        <p>Pollution contaminates the environment and harms living organisms. Air, water, and soil pollution are caused mainly by human activities and need proper management.Air pollution happens when harmful gases, smoke, and dust enter the atmosphere. It is usually caused by vehicles, factories, burning trash, and chemicals. Air pollution can lead to breathing problems, climate change, and poor air quality. Water pollution occurs when rivers, lakes, oceans, or groundwater are contaminated with waste, chemicals, plastics, or sewage. It affects marine life, spreads diseases, and makes water unsafe for drinking and daily use. Soil pollution is caused by chemicals, pesticides, garbage, and industrial waste that make the land unsafe and less fertile. It affects plant growth and can enter the food chain, harming humans and animals.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/102.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Climate Change and Global Warming</h3>
+        <p>Global warming increases Earth’s temperature due to greenhouse gases, while climate change affects weather patterns and natural systems globally. As these gases build up in the atmosphere, they trap heat and make the planet warmer. Climate change is the long-term change in weather patterns and climate conditions across the world. It includes rising temperatures, stronger storms, irregular rainfall, droughts, and melting ice caps. Climate change is a result of global warming and affects both nature and human life.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/103.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Natural Resources and Conservation</h3>
+        <p>Natural resources are materials from nature used for survival. Conservation ensures these resources are used wisely to maintain environmental balance.Natural resources are materials found in nature that people use for survival and development. These include water, air, soil, minerals, forests, animals, and fossil fuels. Natural resources are classified into two types: renewable resources (like sunlight, wind, and water) which can be replaced naturally, and non-renewable resources (like coal, oil, and natural gas) which take millions of years to form and can be used up quickly.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/104.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Waste Management and Recycling</h3>
+        <p>Proper waste management and recycling prevent pollution, protect humans and animals, and maintain a clean and sustainable environment. Waste can come from homes, schools, hospitals, and industries. If waste is not managed properly, it can cause pollution, spread diseases, and harm animals and humans. Proper waste management includes methods like segregation (separating biodegradable and non-biodegradable waste), composting, and safe disposal in landfills.</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

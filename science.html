@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url(images/37.jpg) center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">The Introduction of Science Basics</h1>
+        <div class="hero-subtitle">SCIENCE</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+      🌿 Science Basics<br>
+      Science is the study of the natural world. It helps us understand how things work, from tiny atoms to the entire universe.
+    </div>
+   
+        Science is divided into different branches that focus on specific areas of study.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<!-- Lecture 1 -->
+<div class="lecture-card">
+    <img src="images/47.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Biology</h3>
+        <p>Biology is the study of living organisms such as humans, animals, and plants. It explains how living things grow, reproduce, and interact with their environment. Biology also helps us understand the human body and how to stay healthy. Biology examines life across multiple levels of organization, from molecules and cells to organisms, populations, and ecosystems. Subdisciplines include molecular biology, physiology, ecology, evolutionary biology, developmental biology, and systematics, among others.</p>
+    </div>
+</div>
+
+<!-- Lecture 2 -->
+<div class="lecture-card">
+    <img src="images/36.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Chemistry</h3>
+        <p>Chemistry is the study of matter and the changes it undergoes. It focuses on substances, their properties, and how they react with each other. Chemistry is important in everyday life, from cooking food to creating medicines and materials. Chemistry occupies an intermediate position between physics and biology. It is sometimes called the central science because it provides a foundation for understanding both basic and applied scientific disciplines at a fundamental level.</p>
+    </div>
+</div>
+
+<!-- Lecture 3 -->
+<div class="lecture-card">
+    <img src="images/48.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Physics</h3>
+        <p>Physics is the study of energy, motion, forces, and the laws of nature. It explains how objects move, how gravity works, and how energy is transferred. Physics helps us understand things like electricity, light, and machines. Physics is one of the oldest academic disciplines. Over much of the past two millennia, physics, chemistry, biology, and certain branches of mathematics were part of natural philosophy, but during the Scientific Revolution in the 17th century, these natural sciences branched into separate research endeavors. Physics intersects with many interdisciplinary areas of research, such as biophysics and quantum chemistry, and the boundaries of physics are not rigidly defined.</p>
+    </div>
+</div>
+
+<!-- Lecture 4 -->
+<div class="lecture-card">
+    <img src="images/49.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Experiments</h3>
+        <p>Experiments and other types of hands-on activities are very important to student learning in the science classroom. Experiments can raise test scores and help a student become more engaged and interested in the material they are learning, especially when used over time. Experiments can vary from personal and informal natural comparisons (e.g., tasting a range of chocolates to find a favorite), to highly controlled (e.g., tests requiring complex apparatus overseen by many scientists that hope to discover information about subatomic particles).</p>
+    </div>
+</div>
+
+<!-- Lecture 5 -->
+<div class="lecture-card">
+    <img src="images/50.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Science Skills</h3>
+        <p>The scientific method, scientific thinking, and critical thinking have been terms used at various times to describe these science skills. Today the term "science process skills" is commonly used. Popularized by the curriculum project, Science - A Process Approach (SAPA), these skills are defined as a set of broadly transferable abilities, appropriate to many science disciplines and reflective of the behavior of scientists.</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses - Academic Knowledge Hub</title>
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        /* LAYOUT */
+        .container {
+            display: flex;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 220px;
+            background: #1f2937;
+            color: #fff;
+            height: 100vh;
+            padding: 25px 20px;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 18px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            color: #ffffff;
+        }
+
+        /* MAIN */
+        .main {
+            margin-left: 220px;
+            width: calc(100% - 220px); /* Ensures it takes remaining width */
+            padding: 30px;
+        }
+
+        /* TOPBAR */
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .topbar h2 {
+            font-weight: 500;
+        }
+
+        .topbar input {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        /* COURSES GRID */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* CARD */
+        .course-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            transition: 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* IMAGE */
+        .course-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        /* CONTENT */
+        .course-content {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* BADGE */
+        .badge {
+            font-size: 11px;
+            color: #2c2727;
+            background: #e0ecff;
+            padding: 4px 8px;
+            border-radius: 6px;
+            align-self: flex-start;
+        }
+
+        /* TITLE */
+        .course-content h3 {
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+
+        /* DESCRIPTION */
+        .course-content p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        /* BUTTON */
+        .course-content button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #f7af75;
+            color: white;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .course-content button:hover {
+            background: #334074;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>📚 Knowledge Hub</h2>
+        <a href="index.html">🏠 Home</a>
+        <a href="questions.html">❓ Q&A</a>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <h2>Courses</h2>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="courses">
+            
+            <div class="course-card">
+                <img src="images/5.jpg" alt="Science">
+                <div class="course-content">
+                    <span class="badge">Science</span>
+                    <h3>Science Basics</h3>
+                    <p>Physics, chemistry, and biology fundamentals.</p>
+                    <a href="science.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Tech">
+                <div class="course-content">
+                    <span class="badge">Technology</span>
+                    <h3>Computer Literacy</h3>
+                    <p>Basic computer skills and internet use.</p>
+                    <a href="computer.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/6.jpg" alt="Speaking">
+                <div class="course-content">
+                    <span class="badge">Communication</span>
+                    <h3>Public Speaking</h3>
+                    <p>Presentation and communication skills.</p>
+                    <a href="publicspeaking.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/7.jpg" alt="Life">
+                <div class="course-content">
+                    <span class="badge">Life Development</span>
+                    <h3>Life Skills & Personal Development</h3>
+                    <p>Emotional intelligence, resilience, and goal setting.</p>
+                    <a href="lifedevelopment.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/8.jpg" alt="Music">
+                <div class="course-content">
+                    <span class="badge">Music</span>
+                    <h3>Music Theory & Practice</h3>
+                    <p>Reading music, instruments, and theory.</p>
+                    <a href="music.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/9.jpg" alt="Geometry">
+                <div class="course-content">
+                    <span class="badge">Shapes</span>
+                    <h3>Geometry Essentials</h3>
+                    <p>Angles, Areas, and Volumes.</p>
+                    <a href="geometry.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/10.jpg" alt="Stats">
+                <div class="course-content">
+                    <span class="badge">Statistics</span>
+                    <h3>Introduction to Statistics</h3>
+                    <p>Mean, median, mode, and basic probability.</p>
+                    <a href="statistics.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/11.jpg" alt="Anatomy">
+                <div class="course-content">
+                    <span class="badge">Physiology</span>
+                    <h3>Human Anatomy</h3>
+                    <p>Overview of body systems and functions.</p>
+                    <a href="humananatomy.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/12.jpg" alt="Environment">
+                <div class="course-content">
+                    <span class="badge">Science</span>
+                    <h3>Environmental Science</h3>
+                    <p>Ecosystems, climate change, and sustainability.</p>
+                    <a href="environment.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/13.jpg" alt="Programming">
+                <div class="course-content">
+                    <span class="badge">Computer</span>
+                    <h3>Introduction to Programming</h3>
+                    <p>Coding logic and simple programs.</p>
+                    <a href="programming.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/14.jpg" alt="English">
+                <div class="course-content">
+                    <span class="badge">Language</span>
+                    <h3>English Language Skills</h3>
+                    <p>Grammar, Vocabulary, and Writing.</p>
+                    <a href="language.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/15.jpg" alt="Writing">
+                <div class="course-content">
+                    <span class="badge">Writing</span>
+                    <h3>Creative Writing</h3>
+                    <p>Storytelling, Essays, and Poetry.</p>
+                    <a href="creativewriting.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/16.jpg" alt="History">
+                <div class="course-content">
+                    <span class="badge">Society</span>
+                    <h3>History and Civilization</h3>
+                    <p>Key historical events and cultures.</p>
+                    <a href="history.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/17.jpg" alt="Geography">
+                <div class="course-content">
+                    <span class="badge">Mapping</span>
+                    <h3>Geography and Maps</h3>
+                    <p>Physical, Political, and Cultural geography.</p>
+                    <a href="mapping.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/18.jpg" alt="Economics">
+                <div class="course-content">
+                    <span class="badge">Economics</span>
+                    <h3>Economic Basics</h3>
+                    <p>Supply & demand, Markets, and Personal Finance.</p>
+                    <a href="economics.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/19.jpg" alt="Psychology">
+                <div class="course-content">
+                    <span class="badge">Psychology</span>
+                    <h3>Basics of Psychology</h3>
+                    <p>Human Behavior, Cognition, and Emotions.</p>
+                    <a href="humanbehavior.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/20.jpg" alt="Health">
+                <div class="course-content">
+                    <span class="badge">Healthy Lifestyle</span>
+                    <h3>Health & Nutrition</h3>
+                    <p>Diet, Exercise, and Healthy Lifestyle Habits.</p>
+                    <a href="nutrition.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/21.jpg" alt="Arts">
+                <div class="course-content">
+                    <span class="badge">Arts</span>
+                    <h3>Art & Visual Design</h3>
+                    <p>Drawing, Painting, and Design Principles.</p>
+                    <a href="arts.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/24.jpg" alt="Foreign">
+                <div class="course-content">
+                    <span class="badge">Languages</span>
+                    <h3>Foreign Languages</h3>
+                    <p>Introduction to languages like Spanish, French, or Mandarin.</p>
+                    <a href="foreign.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/25.jpg" alt="Logic">
+                <div class="course-content">
+                    <span class="badge">Problem Solving</span>
+                    <h3>Critical Thinking</h3>
+                    <p>Logic, Reasoning, and Decision Making.</p>
+                    <a href="criticalthinking.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/26.jpg" alt="Digital">
+                <div class="course-content">
+                    <span class="badge">Digital</span>
+                    <h3>Digital Literacy</h3>
+                    <p>Basics of Digital Literacy and internet safety.</p>
+                    <a href="digital.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="images/27.jpg" alt="Study">
+                <div class="course-content">
+                    <span class="badge">Study Skills</span>
+                    <h3>Study Skills and Time Management</h3>
+                    <p>Organization, Focus, and Learning Strategies.</p>
+                    <a href="management.html"><button>View Course</button></a>
+                </div>
+            </div>
+
+        </div> </div> </div> </body>
+</html>

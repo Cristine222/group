@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Academic Knowledge Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Academic <span>Knowledge Hub</span></div>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="index2.html">Explore</a>
+      
+        <a href="questions.html">Q&A</a>
+       
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="overlay">
+        <h1>Providing Reliable Educational Content</h1>
+        <p>Learn • Discover • Grow</p>
+    </div>
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+
+    <h2 class="section-title">What is Education?</h2>
+
+    <div class="edu-container">
+
+        <div class="edu-card">
+            <h3>Definition</h3>
+            <p>
+                Education is the process of gaining knowledge, skills, values, and understanding 
+                through learning, study, and experience.
+            </p>
+        </div>
+
+        <div class="edu-card">
+            <h3>Importance</h3>
+            <ul>
+                <li>Builds knowledge</li>
+                <li>Creates opportunities</li>
+                <li>Develops thinking skills</li>
+                <li>Improves communication</li>
+            </ul>
+        </div>
+
+        <div class="edu-card">
+            <h3>Types</h3>
+            <ul>
+                <li><strong>Formal</strong> – Schools</li>
+                <li><strong>Informal</strong> – Daily life</li>
+                <li><strong>Non-formal</strong> – Online learning</li>
+            </ul>
+        </div>
+
+        <div class="edu-card">
+            <h3>Benefits</h3>
+            <ul>
+                <li>Better life quality</li>
+                <li>Confidence</li>
+                <li>Goal achievement</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Academic Knowledge Hub</p>
+</footer>
+<script>
+
+/* PAGE FADE IN */
+window.onload = () => {
+    document.body.style.opacity = "1";
+};
+
+/* PAGE TRANSITION */
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e) {
+        if (this.href && !this.href.includes("#")) {
+            e.preventDefault();
+            document.body.style.opacity = "0";
+            setTimeout(() => {
+                window.location = this.href;
+            }, 300);
+        }
+    });
+});
+
+/* SCROLL REVEAL */
+function reveal() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 50) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", reveal);
+
+/* NAVBAR SHADOW ON SCROLL */
+window.addEventListener("scroll", () => {
+    const nav = document.querySelector(".navbar");
+    if (window.scrollY > 20) {
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+});
+
+</script>
+<script>
+const cards = document.querySelectorAll(".edu-card");
+
+function revealCards() {
+    const trigger = window.innerHeight - 50;
+
+    cards.forEach((card, index) => {
+        const top = card.getBoundingClientRect().top;
+
+        if (top < trigger) {
+            setTimeout(() => {
+                card.classList.add("show");
+            }, index * 120); // stagger effect
+        }
+    });
+}
+
+window.addEventListener("scroll", revealCards);
+window.addEventListener("load", revealCards);
+</script>
+<script>
+const card = document.querySelectorAll(".edu-card");
+
+function revealCards() {
+    const trigger = window.innerHeight - 50;
+
+    cards.forEach((card, index) => {
+        const top = card.getBoundingClientRect().top;
+
+        if (top < trigger) {
+            setTimeout(() => {
+                card.classList.add("show");
+            }, index * 120);
+        }
+    });
+}
+
+window.addEventListener("scroll", revealCards);
+window.addEventListener("load", revealCards);
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/123.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">History and Civilization</h1>
+        <div class="hero-subtitle">Key historical events and cultures.</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+       Is the study of past events, cultures, and societies that shaped the world we live in today.<br><br>
+    </div>
+    <p>
+      It also gives us a deeper appreciation of different cultures and human achievements.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/124.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Ancient Civilizations (Egypt, Mesopotamia, Indus Valley, China)</h3>
+        <p>
+Ancient Civilizations (Egypt, Mesopotamia, Indus Valley, China) are some of the earliest societies that developed organized systems of living, culture, and government. These civilizations laid the foundation for modern society.
+Ancient Egypt developed along the Nile River and is known for its pyramids, pharaohs, and advances in writing (hieroglyphics). The Nile provided water, food, and transportation, helping the civilization grow.
+Mesopotamia, often called the “cradle of civilization,” was located between the Tigris and Euphrates rivers. It is known for early cities, laws like the Code of Hammurabi, and the invention of writing called cuneiform.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/125.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. Medieval Period and Feudal Systems</h3>
+        <p>
+The Medieval Period, also known as the Middle Ages, began after the fall of the Roman Empire. During this time, life was mostly rural, and people depended on farming for survival. Kingdoms were ruled by kings, but they relied on nobles and lords to help manage land and people.
+The feudal system was a social and political structure based on land ownership and loyalty. The king would give land to nobles (lords), and in return, the nobles promised to serve and protect the kingdom. Lords would then give land to knights, who provided military service. At the bottom were peasants or serfs, who worked the land and provided food but had limited freedom.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/126.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Renaissance and Cultural Rebirth</h3>
+        <p>
+Renaissance and Cultural Rebirth refers to a period in history (around the 14th to 17th century) when there was a renewed interest in art, science, education, and classical knowledge from ancient Greece and Rome. The word “Renaissance” means “rebirth,” showing how culture and learning were revived after the Medieval Period.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/127.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Colonialism and Global Expansion</h3>
+        <p>
+Colonialism is the practice by which a powerful nation establishes control over a foreign territory and its people, often to exploit its resources and impose its own culture or government.
+Global Expansion refers to the historical process during the Age of Discovery and the Industrial Revolution where European powers traveled beyond their borders to establish trade routes and claim new lands across the world.
+        </p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/128.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5. Modern History and World Wars</h3>
+        <p>
+Modern History is the chronological period beginning around the 16th century that is characterized by the rise of nation-states, the Enlightenment, the Industrial Revolution, and rapid technological advancement.
+The World Wars were two massive, global military conflicts in the 20th century (1914–1918 and 1939–1945) that involved the majority of the world's most powerful nations and resulted in significant political, social, and territorial shifts.
+        </p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #000000;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent: #392626;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero-card {
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 260px;
+    margin-top: 30px;
+    background: linear-gradient(to right, rgba(179,93,93,0.8), rgba(0,0,0,0.5)),
+                url("images/185.jpg") center/cover;
+}
+
+.hero-content {
+    padding: 40px 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* DESCRIPTION */
+.description-section {
+    padding: 30px 0;
+}
+
+.course-title-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* LECTURES */
+.lectures-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+}
+
+.lecture-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.lecture-thumbnail {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.lecture-info {
+    flex: 1;
+}
+
+.lecture-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lecture-info p {
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .lecture-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lecture-thumbnail {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index2.html" class="back-btn">⬅</a>
+
+<div class="container">
+
+<header class="hero-card">
+    <div class="hero-content">
+        <h1 class="hero-title">Career</h1>
+        <div class="hero-subtitle">Skill development, and Personal fulfillment</div>
+    </div>
+</header>
+
+<section class="description-section">
+    <div class="course-title-main">
+     Long-term journey of an individual’s professional life, encompassing the sequence of jobs, experiences, and educational milestones they undertake over time.
+    </div>
+    <p>
+       It is often driven by a person’s passions, values, and long-term goals, requiring continuous learning and adaptation to navigate the evolving demands of the global workforce.
+    </p>
+</section>
+
+<div class="lectures-header">Lectures</div>
+
+<div class="lecture-card">
+    <img src="images/186.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>1. Career Planning and Goal Setting</h3>
+        <p>Effective career planning involves identifying your core strengths and setting specific, measurable objectives to guide your professional trajectory over several years. By establishing a clear roadmap, you can make informed decisions about which opportunities to pursue and which skills are most critical to your future success. This proactive approach ensures that you remain focused and motivated, even when faced with the inevitable challenges or shifts within your chosen industry.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/187.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>2. The Importance of Professional Networking</h3>
+        <p>Building a robust professional network is essential for discovering "hidden" job opportunities and gaining valuable insights from experienced mentors within your field. Engaging with colleagues through industry events, social media, and professional organizations fosters a community of support that can provide guidance during career transitions. Ultimately, the relationships you cultivate today can become the foundation for collaborative projects and significant advancements in your long-term career journey.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/188.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>3. Continuous Learning and Skill Development</h3>
+        <p>In today’s rapidly changing economy, the commitment to lifelong learning is vital for maintaining your relevance and competitiveness in the modern labor market. Regularly upgrading your technical abilities and soft skills allows you to adapt to new technologies and innovative methodologies that redefine how work is accomplished. Professionals who prioritize professional development are often better equipped to take on leadership roles and handle the complexities of a globalized work environment.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/189.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>4. Achieving Work-Life Balance</h3>
+        <p>Maintaining a healthy balance between your professional responsibilities and your personal life is crucial for preventing burnout and ensuring long-term mental well-being. When individuals set clear boundaries and prioritize self-care, they often find that their productivity and creativity in the workplace actually increase significantly over time. A sustainable career is one where professional achievements do not come at the expense of one's physical health or meaningful relationships with family and friends.</p>
+    </div>
+</div>
+
+<div class="lecture-card">
+    <img src="images/190.jpg" class="lecture-thumbnail">
+    <div class="lecture-info">
+        <h3>5.Navigating Career Transitions</h3>
+        <p>A career transition occurs when a professional chooses to change their industry or functional role to better align with their evolving interests and life circumstances. This process often requires a combination of courage, financial planning, and the strategic translation of existing skills to a completely new and unfamiliar professional context. Successfully navigating such a shift can lead to renewed passion for your work and open doors to diverse experiences that were previously out of reach.</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
